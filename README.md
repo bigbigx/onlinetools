@@ -3,22 +3,26 @@
 
 现在已经包含的功能有：
 
-在线cms识别|旁站|c段|信息泄露|工控|系统|物联网安全|cms漏洞扫描|端口扫描
+在线cms识别|旁站|c段|信息泄露|工控|系统|物联网安全|cms漏洞扫描|nmap端口扫描|子域名获取
 
 
+# 部署方法
 
+    git clone https://github.com/iceyhexman/onlinetools.git
+    cd onlinetools
+    pip3 install -r requirements.txt
+    nohup python3 main.py &
 
-# 依赖安装
-    pip install -r requirements.txt
+# Docker 部署
 
-# 使用方法
-
-    python3 main.py
+    git clone https://github.com/iceyhexman/onlinetools.git
+    cd onlinetools
+    docker build -t onlinetools .
+    docker run -d -p 8000:8000 onlinetools
 
 浏览器打开
 
     http://localhost:8000/
-
 
 # 说明
 1.漏洞poc来自开源项目AngelSword，共320个，在此表示感谢
@@ -29,22 +33,28 @@
 [POC](./poc.md)
 
 
-# 运行截图
+# 运行截图 （部分）
 
 ![cmsreg](/img/cms.png)
 ![cmsvuln](/img/cmsaq.png)
 ![pang](/img/pang.png)
-![industrial](/img/industrial.png)
-![system](/img/system.png)
-![search](/img/search.png)
-![hardware](/img/hardware.png)
 ![information](/img/information.png)
+![subdomain](/img/subdomain.png)
+![nmap](/img/nmap.png)
+
+
 
 # demo
 http://tools.hexlt.org/
 
-求别滥用就行
+别滥用就行
 
-# bug
-Blog:https://www.hexlt.org
+# bug & 下一版本
+
+有什么建议或者要修改的地方请直接提issue就行
+懒癌犯了好几个月了...
+下一版本最主要的变化应该是插件中心吧..各位dalao欢迎提poc(`・ω・´)
+
+
+
 
